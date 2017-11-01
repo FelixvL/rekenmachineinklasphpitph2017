@@ -23,12 +23,33 @@
                     g=g-3;
                     var h = currentText.substring (0,g);
                     document.getElementById("idinput").value=h;
-        }
-        
-                
+                }
+                if (m =='23'){
+                    doPlusSign();
+                }
+                if(m=='43'){
+                    doEqualsSign();
+                }
+//                var N1 = document .getElementById(idinpu));
+//                var N2 = document .getElementById(idinput);
             }
-            
-         </script>
+            function doPlusSign(){
+                var numberOnDisplay = document.getElementById('idinput').value;
+                console.log(numberOnDisplay);
+                document.getElementById('tempStorePlus').value = numberOnDisplay.substring(0, --numberOnDisplay.length);
+                clearDisplay();
+            }
+            function clearDisplay(){
+                document.getElementById('idinput').value = "";
+            }
+            function doEqualsSign(){
+                var numberOnDisplay = document.getElementById('idinput').value;
+                numberOnDisplay = numberOnDisplay.substring(0, --numberOnDisplay.length);
+                var previousNumber = document.getElementById('tempStorePlus').value;
+                clearDisplay();
+                document.getElementById('idinput').value = (numberOnDisplay + previousNumber);
+            }
+        </script>
         <style>
             div{
                 background-color: green;
@@ -80,7 +101,7 @@
 
                 //$id= "$x.$y";      //    "1.2"
                 $id= $x."".$y;      //    "12"
-                echo "\n";
+                //echo "\n";
                 echo '<button id=idbutton'.$id.' onclick="Insert(\''.$id.'\')">'.$toetsen[$x][$y].'</button>';
             }
         }
@@ -90,7 +111,7 @@
                 
             
         </div>
-       
+       <input type="text" id="tempStorePlus">
 
 
 
