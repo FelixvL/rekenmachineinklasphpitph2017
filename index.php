@@ -4,13 +4,19 @@
         <script> 
             
             function Insert(m)
+            
             {
-                
+               console.log (m);
+               
              var x= document.getElementById("idbutton"+m).innerHTML;
              var p= document.getElementById("idinput").value;
-             document.getElementById("idinput").value=x+p;
+             document.getElementById("idinput").value=p+x;
              
-
+             if(m=='00'){
+                 
+                     document.getElementById("idinput").value = "";
+        }
+        
                 
             }
             
@@ -66,8 +72,8 @@
 
                 //$id= "$x.$y";      //    "1.2"
                 $id= $x."".$y;      //    "12"
-               // echo "\n";
-                echo '<button id=idbutton'.$id.' onclick="Insert('.$id.')">'.$toetsen[$x][$y].'</button>';
+                echo "\n";
+                echo '<button id=idbutton'.$id.' onclick="Insert(\''.$id.'\')">'.$toetsen[$x][$y].'</button>';
             }
         }
         
