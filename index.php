@@ -1,5 +1,18 @@
 <html>
     <head>  
+        
+        <script> 
+            
+            function Insert()
+            {
+                
+             var x= document.getElementById("idbutton").innerHTML;
+             document.getElementById("idinput").value=x;
+
+                
+            }
+            
+         </script>
         <style>
             div{
                 background-color: green;
@@ -36,27 +49,29 @@
     <body>
         
         <div>
-            <form>
-                <input text="" >
+                <input type=text id="idinput">
                  <?php
         $toetsen = array(array("C","/","X","BS"),
                     array("7","8","9","-"),
                     array("4","5","6","+"),
                     array("1","2","3","()"),
                     array("0",".","%","="));
+        
+        
         for ($x = 0; $x < 5; $x++) {
             echo "<br>";
             for ($y = 0; $y < 4; $y++) {
 
-
-                echo "<button>".$toetsen[$x][$y]."</button>";
+                //$id= "$x.$y";      //    "1.2"
+                $id= $x."".$y;      //    "12"
+                
+                echo '<button id="idbutton" onclick="Insert()">'.$toetsen[$x][$y].'</button>';
             }
         }
         
         
         ?>
                 
-            </form>
             
         </div>
        
