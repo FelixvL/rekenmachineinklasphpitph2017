@@ -47,7 +47,7 @@
                 numberOnDisplay = numberOnDisplay.substring(0, --numberOnDisplay.length);
                 var previousNumber = document.getElementById('tempStorePlus').value;
                 clearDisplay();
-                document.getElementById('idinput').value = (numberOnDisplay + previousNumber);
+                document.getElementById('idinput').value = (parseInt(numberOnDisplay) + parseInt(previousNumber));
             }
         </script>
         <style>
