@@ -17,8 +17,13 @@
                      document.getElementById("idinput").value = "";
                 }
                 if(m=='03'){
-                    
-                }
+                    var currentText = document.getElementById("idinput").value;
+                    alert(currentText);
+                    var g = currentText.length;
+                    g=g-3;
+                    var h = currentText.substring (0,g);
+                    document.getElementById("idinput").value=h;
+        }
         
                 
             }

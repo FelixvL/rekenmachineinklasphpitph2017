@@ -29,8 +29,9 @@ echo $timePassed = time() - 1509544565;
 echo date('l jS \of F Y h:i:s A', time());
 echo "<br>";
 echo date('l', time());
-
-
+// 1 jan 1970
+echo "<br>";
+echo (((($datum / 60)/60)/24)/365.25);
 
 ?>
         
