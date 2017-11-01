@@ -15,7 +15,10 @@
              if(m=='00'){
                  
                      document.getElementById("idinput").value = "";
-        }
+                }
+                if(m=='03'){
+                    
+                }
         
                 
             }
