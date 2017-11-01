@@ -3,11 +3,13 @@
         
         <script> 
             
-            function Insert()
+            function Insert(m)
             {
                 
-             var x= document.getElementById("idbutton").innerHTML;
-             document.getElementById("idinput").value=x;
+             var x= document.getElementById("idbutton"+m).innerHTML;
+             var p= document.getElementById("idinput").value;
+             document.getElementById("idinput").value=x+p;
+             
 
                 
             }
@@ -59,13 +61,13 @@
         
         
         for ($x = 0; $x < 5; $x++) {
-            echo "<br>";
+             echo "<br>";
             for ($y = 0; $y < 4; $y++) {
 
                 //$id= "$x.$y";      //    "1.2"
                 $id= $x."".$y;      //    "12"
-                
-                echo '<button id="idbutton" onclick="Insert()">'.$toetsen[$x][$y].'</button>';
+               // echo "\n";
+                echo '<button id=idbutton'.$id.' onclick="Insert('.$id.')">'.$toetsen[$x][$y].'</button>';
             }
         }
         
